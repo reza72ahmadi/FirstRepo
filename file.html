@@ -1,2 +1,189 @@
-<h1> Hello World! </h1>
-<h2> Hello World 2</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="text-align:center">
+        <h2>This is the switch practice</h2>
+    <!--  ---------------------1---------- switch------------------- -->
+    Senf : <select id="demo">
+        <option value="13"> 1 - 3 </option>
+        <option value="49"> 4 - 9 </option>
+        <option value="1012"> 10 - 12 </option>
+    </select> <br><br>
+
+    Hours : <input type="text" id="demo1" size="4"> <br><br>
+
+    <input type="button" value="Calculate" onclick="show();"><br><br>
+    <input type="text" id="demo2" size="5">
+<hr>
+    <script>
+        function show() {
+            var senf = document.getElementById("demo").value;
+            senf = parseInt(senf);
+            var hours = document.getElementById("demo1").value;
+            hours = parseInt(hours);
+            var sph;
+
+            switch (senf) {
+                case 13:
+                    sph = 100;
+                    break;
+                case 49:
+                    sph = 150;
+                    break;
+                case 1012:
+                    sph = 200;
+                    break;
+            }
+            var salary = hours * sph;
+            document.getElementById("demo2").value = salary;
+        }
+    </script>
+    
+    <!--  --------------------------1------ switch----------------------- -->
+    <!--  --------------------------2------- switch------------------------- -->
+    <select id="demo3">
+        <option value="jan">January</option>
+        <option value="feb">February</option>
+        <option value="mar">March</option>
+        <option value="apr">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="aug">August</option>
+        <option value="sep">September</option>
+        <option value="oct">October</option>
+        <option value="nov">Novomber</option>
+        <option value="dec">December</option>
+    </select>
+    <br><br>
+    <input type="button" value="Click here" onclick="show1();">
+    <h1 id="demo4">It will changed</h1>
+
+    <script>
+        function show1() {
+            var month = document.getElementById("demo3").value;
+            var mon;
+
+            switch (month) {
+                case "jan":
+                case "feb":
+                case "mar":
+                case "apr":
+                case "may":
+                case "june":
+                    mon = "This month is 31 days";
+                    break;
+                case "july":
+                case "aug":
+                case "sep":
+                case "oct":
+                case "nov":
+                case "dec":
+                    mon = "This month is 30 days";
+                
+            }
+            document.getElementById("demo4").innerHTML = mon;
+        }
+    </script>
+    <hr>
+<!--  --------------------------2------ switch------------------------ -->
+<!--  -----------3----prompt----confirm------------------------------- -->
+<h2>This is the prompt and confirm practice</h2>
+<script>
+    // var name = prompt ("Enter your name");
+    // alert("welcome " + name);
+
+    // var x = confirm("Are you sure?");
+    // if (x) 
+    //     alert("you clicked ok");
+    
+    //  else alert("you clicked canceal");
+function delet() {
+    var result = confirm("Are you Sure to delet ?")
+
+     if (result) {
+}
+}
+</script>
+ 
+<img src="delet.png" onclick="delet();" width="60">
+<hr>
+
+<input type="text" id="number1"size="5"> <br><br>
+<input type="text" id="number2"size="5"><br><br>
+<input type="button" value="=" onclick="add();">
+<h1 id="result"></h1>
+<script>
+    function add() {
+       var num1 = document.getElementById("number1").value;
+       num1 = parseInt(num1)
+       var num2 = document.getElementById("number2").value;
+       num2 = parseInt(num2)
+       document.getElementById("result").innerHTML = num1 + num2;
+    } 
+</script>
+<hr>
+<form onreset=" return check();">
+Name : <input type="name" size="6"> <br><br>
+Last Name: <input type="lastname" size="6"> <br><br>
+Email : <input type="email" size="6"><br><br>
+Password : <input type="password" size="6"><br><br>
+<input type="submit"><br><br>
+<input type="reset">
+</form>
+<script>
+function check() {
+     var result =  confirm("Are you sure to delet");
+      if (result) 
+          return true;
+      else 
+      return false;
+}
+</script>
+<hr>
+<!--  ------------------3----prompt----confirm--------function------------------ -->
+<!----------4th video------------------------- -->
+
+<input type="text" id="demo0"> <br><br>
+    <input type="button" value="Click Here" onclick="show();"> 
+    <h1 id="demo11"></h1>
+<hr>
+    <h3 id="dd"></h3>
+
+    <script>
+    function show() {
+       var x = document.getElementById("demo0").value;
+       var y = x % 2;
+
+       if (x == 0) {
+        document.getElementById("demo11").innerHTML= "صفر یک عدد واقعی نیست";
+       } else if(y == 0) {
+        document.getElementById("demo11").innerHTML = "این عدد جفت است";
+       } else {
+        document.getElementById("demo11").innerHTML= "این عدد تاق است";
+       }
+    }
+
+var x = 1;
+    while (x<10) {
+        document.getElementById("dd").innerHTML= x;
+        x++;
+       
+    }
+  
+    
+    </script>
+
+
+
+
+</body>
+
+</html>
